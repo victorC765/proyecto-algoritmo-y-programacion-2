@@ -36,6 +36,10 @@ a{
      border-radius: 12px;
      
 }
+img{border: none;
+    height: 25px;
+    width: 25px;
+}
 a:active { background-color: rgb(255, 115, 169); }
 
 .comtainer{
