@@ -1,26 +1,41 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FacturApp</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="css\menu.css">
+    <link rel="stylesheet" href="css\style.css">
 </head>
 <body>
-    <form class="formulario">
-        <h1>Usuario</h1>
-        <section class="container">
-            <section class="input-container">               
-                <img src="assets/icon/usuario.png">
-                <input type="text" placeholder="Nombre y Apellido">
-            </section>
-            <section class="input-container">               
-                <img src="assets/icon/tarjeta-de-identificacion.png">
-                <input type="text" placeholder="Cedula de Identidad">
-            </section>
-            <p>Importante debe de registrace antes de entrar</p>
-            <a href="#">Inicio</a>
-        </section>
-    </form>
+    <div id="header">
+        <ul class="nav">
+            <li><a href="">Usuario</a>
+                <ul>
+                   <li><a href="Usuario.html">Inicio de usuario</a></li>
+                </ul>
+            </li>
+            <li><a href="">Clientes</a>
+                <ul>
+                    <li><a href="Cliente.html">Registrar cliente</a></li>
+                    <li><a href="">Clientes</a></li>
+                </ul>
+            </li>
+            <li><a href="">Factura</a>
+                <ul>
+                    <li><a href="factura.html">Hacer una Factura</a></li>
+                </ul>
+            </li>
+
+            <li><a href="">Acerca de</a>
+                <ul>
+                    <li><a href="">FacturApp</a></li>
+                    <li><a href="">Uso de la App</a></li>
+                </ul>
+            </li>
+            <li><a href="">Contacto</a></li>
+        </ul>
+    </div>
+    
 </body>
 </html>
