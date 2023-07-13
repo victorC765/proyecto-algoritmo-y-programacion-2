@@ -2,12 +2,15 @@
 			* {
 				margin:0px;
 				padding:0px;
+				display: flexbox;
 			}
 			
 			#header {
 				margin:auto;
-				width:500px;
+				padding-top: 4px;
+				width:800px;
 				font-family:Arial, Helvetica, sans-serif;
+				font-size: 25px;
 			}
 			
 			ul, ol {
@@ -19,21 +22,25 @@
 			}
 			
 			.nav li a {
-				background-color:#000;
-				color:#fff;
+				background-color:#351921;
+				color:#faf2f5;
+				opacity: 0.9;
+				filter: alpha(opacity=100);
+				zoom: 1;
 				text-decoration:none;
-				padding:10px 12px;
+				padding: 15px 30px;
+				border-bottom-width: 15px;
 				display:block;
 			}
 			
 			.nav li a:hover {
-				background-color:#434343;
+				background-color:#da74a7;
 			}
 			
 			.nav li ul {
 				display:none;
 				position:absolute;
-				min-width:140px;
+				min-width:120px;
 			}
 			
 			.nav li:hover > ul {
@@ -45,7 +52,7 @@
 			}
 			
 			.nav li ul li ul {
-				right:-140px;
+				right:-120px;
 				top:0px;
 			}
 			
