@@ -24,6 +24,7 @@
 		background: #22161b;
 		height: 100vh;
 		position: relative;
+		opacity: 0.9;
 		transition: all 500ms ease;
 		transform: translateX(-100%);
 	}

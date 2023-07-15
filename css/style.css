@@ -37,6 +37,15 @@ input[type="button"]{
      border: none;
      
 }
+
+input [type="number"]{
+    border: none;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    width: 85%;  
+
+}
 img{border: none;
     height: 25px;
     width: 25px;
@@ -50,7 +59,13 @@ input[type="button"]:active { background-color:#fa6592; }
 
 .input-container{
     margin-bottom: 15px;
-    border: 1px solid #ffcbf2;
+    border: none;
+
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    border: none;
 
 }
 
@@ -61,16 +76,13 @@ input[type="text"]{
     padding: 10px;
     width: 85%;  
 }
-input[type="radio"]{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-}
+
 
 @media(min-width:768px){
     .formulario{
         margin: auto;
         width: 500px;
         margin-top: 150px;
-        border-radius: 2%;
+        border-radius: 5%;
     }
 }
