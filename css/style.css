@@ -38,6 +38,9 @@ input[type="button"]{
      
 }
 
+
+input[type="button"]:active { background-color:#fa6592; }
+
 input [type="number"]{
     border: none;
     font-size: 20px;
@@ -50,7 +53,6 @@ img{border: none;
     height: 25px;
     width: 25px;
 }
-input[type="button"]:active { background-color:#fa6592; }
 
 .comtainer{
     width: 100%;
