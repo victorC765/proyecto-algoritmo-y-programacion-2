@@ -8,6 +8,11 @@ inquirer.prompt([{
   default: 'fulanito',
 },{
   type: 'input',
+  name:'año',
+  message:'¿En que año naciste?',
+  default: '2005'
+  },{
+  type: 'input',
   name: 'color',
   message: '¿Cuál es tu color favorito?',
   default: 'verde',
@@ -16,7 +21,12 @@ inquirer.prompt([{
   name:'país',
   message:'¿En que país vives?',
   default: 'Perú'
-  }
+  },{
+    type: 'input',
+    name:'comida',
+    message:'¿Cuál es tu comida favorita?',
+    default: 'pizza'
+    }
 ])
 .then((answers) => {
   fs.writeFile('data.json', JSON.stringify(answers), (err) => {
