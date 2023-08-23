@@ -1,4 +1,5 @@
 import '../css/style.css'
+import Image from 'next/image';
 
 export default function CreateClient(){
     return (
@@ -6,19 +7,19 @@ export default function CreateClient(){
         <h1>Registro de Cliente</h1>
         <section class="container">
             <section class="input-container">
-                <img src="assets/icon/usuario.png"/>           
+                <Image src="/icon/usuario.png" alt="Usuario" width={500} height={500}/>           
                 <input type="text" name="cliente" placeholder="Nombre y Apellido"/>
             </section>
             <section class="input-container">
-                <img src="assets/icon/tarjeta-de-identificacion.png"/>                 
+                <Image src="/icon/tarjeta-de-identificacion.png" alt="ID" width={500} height={500}/>                 
                 <input type="text" name="cedula"placeholder="Cédula de Identidad"/>
             </section>
             <section class="input-container">
-                <img src="assets/icon/telefono.png"/>               
+                <Image src="/icon/telefono.png" alt="Telefono" width={500} height={500}/>               
                 <input type="text" name="telefono" placeholder="Número de Telefono"/>
             </section>
             <section class="input-container">
-                <img src="assets/icon/casa.png"/>                 
+                <Image src="/icon/casa.png" alt="Domicilio" width={500} height={500}/>                 
                 <input type="text" name="Domicilio"placeholder="Dirección de Domicilio"/>
             </section>
 

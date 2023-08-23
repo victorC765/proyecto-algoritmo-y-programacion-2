@@ -1,6 +1,7 @@
 
 import './pages/css/menu.css';
 import './pages/css/pagina.css';
+import Image from 'next/image';
 
 
 import Link from 'next/link';
@@ -20,10 +21,10 @@ export default function RootLayout({ children }) {
 			<label for="btn-menu">☰</label>
 		</section>
 			<section class="logo">
-				<h1>FacturAdd</h1>
+			<Link href="layout.js"><h1>FacturAdd</h1></Link>
 			</section>
 			<section class="menu">
-				<Link href="/pages">Inicio</Link>
+				<Link href="/pages/usuario">Inicio</Link>
 				<a href="#">acerca de</a>
 				<a href="#">Contacto</a>
         </section>
@@ -38,24 +39,24 @@ export default function RootLayout({ children }) {
 	<section class="cont-menu">
 		<nav>
 			<ul class="nav">
-			   <li><a><img src="assets/icon/usuario menu.png"/>   Usuario</a>
+			   <li><a><Image src="/icon/usuario menu.png" alt="Usuario" width={500} height={500}/>  Usuario</a>
 				   <ul>
-					<li><a href="Usuario.html">Inicio de Usuario</a></li>
+					<li><Link href="/pages/usuario">Inicio de Usuario</Link></li>
 				   </ul> 
 			   </li>
-			   <li><a><img src="assets/icon/cliente.png"/> Clientes</a>
+			   <li><a><Image src="/icon/cliente.png" alt="Cliente" width={500} height={500}/> Clientes</a>
                 <ul>
                     <li><Link href="/pages/crear-cliente">Registrar cliente</Link></li>
                     <li><a href="">Clientes</a></li>
                 </ul>
                </li>
-			   <li><a><img src="assets/icon/factura.png"/> Factura</a>
+			   <li><a><Image src="/icon/factura.png" alt="Factura" width={500} height={500}/> Factura</a>
                 <ul>
                     <li><Link href="/pages/crear-factura">Nueva Factura</Link></li>
                 </ul>
               </li>
-			   <li><a><img src="assets/icon/producto menu.png"/> Productos</a></li>
-			   <li><a><img src="assets/icon/ajustes.png"/>Ajustes</a></li>
+			   <li><a><Image src="/icon/producto menu.png" alt="Producto" width={500} height={500}/> Productos</a></li>
+			   <li><a><Image src="/icon/ajustes.png" alt="Ajustes" width={500} height={500}/> Ajustes</a></li>
 		    </ul>
 		</nav>
 		<label for="btn-menu">✖️</label>
