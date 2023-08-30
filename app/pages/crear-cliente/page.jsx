@@ -32,7 +32,9 @@ export default function CreateClient(){
                  </p>
             </section>
             <p></p>
+            <Link href="./NavBar">
             <input type="button" value="Registrar" onclick="location.href='index.html'"/>
+            </Link>
         </section>
     </form>
     )

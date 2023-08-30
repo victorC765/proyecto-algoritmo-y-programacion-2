@@ -37,7 +37,7 @@ export default function CresteFactur(){
             </section>
             
             <p></p>
-            <Link href="../pages/NavBar">
+            <Link href="../pages/factura">
             <input type="button" value="Realizar Factura" />
             </Link>
         </section>
