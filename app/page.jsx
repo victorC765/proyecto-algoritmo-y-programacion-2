@@ -20,7 +20,7 @@ export default function InitUser()
                 <Link href="./pages/crear-usuario">¿No tienes una cuenta ?</Link>
                 </p>
             </section>
-            <Link href="/Pages/NavBar">
+            <Link href="/pages/NavBar">
             <input type="button" value="Iniciar Sesión" />
             </Link>
         </section>

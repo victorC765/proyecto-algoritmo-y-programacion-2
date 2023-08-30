@@ -18,7 +18,6 @@ export default function NavBar() {
       <h1>FacturAdd</h1>
       </section>
       <section class="menu">
-          <Link href="/pages/iniciar-usuario">Inicio</Link>
           <a href="#">acerca de</a>
           <a href="#">Cerrar sesion</a>
   </section>
@@ -33,11 +32,6 @@ export default function NavBar() {
 <section class="cont-menu">
   <nav>
       <ul class="nav">
-         <li><a><Image src="/icon/usuario menu.png" alt="Usuario" width={500} height={500}/>  Usuario</a>
-             <ul>
-              <li><Link href="/pages/iniciar-usuario">Inicio de Usuario</Link></li>
-             </ul> 
-         </li>
          <li><a><Image src="/icon/cliente.png" alt="Cliente" width={500} height={500}/> Clientes</a>
           <ul>
               <li><Link href="/pages/crear-cliente">Registrar cliente</Link></li>
