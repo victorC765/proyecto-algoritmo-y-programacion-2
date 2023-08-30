@@ -1,9 +1,15 @@
 
-import '../css/style.css'
+import '../css/style.css';
 import Image from 'next/image';
+import NavBar from '../NavBar/page'
+import Link from 'next/link';
+
 
 export default function CresteFactur(){
+    const elementos = NavBar();
     return (
+        <section>
+         
         <form class="formulario">
         <h1>Factura</h1>
         <section class="container">
@@ -31,8 +37,11 @@ export default function CresteFactur(){
             </section>
             
             <p></p>
-            <input type="button" value="Realizar Factura" onclick="location.href='index.html'"/>
+            <Link href="../pages/NavBar">
+            <input type="button" value="Realizar Factura" />
+            </Link>
         </section>
     </form>
+    </section>
     );
 }
