@@ -1,6 +1,4 @@
 
-import './pages/css/menu.css';
-import './pages/css/pagina.css';
 import Image from 'next/image';
 
 

@@ -1,5 +1,4 @@
 
-
 import '../css/menu.css';
 import '../css/pagina.css';
 import Link from 'next/link';
@@ -8,50 +7,50 @@ import Image from 'next/image';
 export default function NavBar() {
     return (
 
-<header class="header">
+<header className="header">
 <nav>
-  <section class="container">
-  <section class="btn-menu">
-      <label for="btn-menu">☰</label>
+  <section className="container">
+  <section className="btn-menu">
+      <label htmlFor='btn-menu'>☰</label>
   </section>
-      <section class="logo">
+      <section className="logo">
       <h1>FacturAdd</h1>
       </section>
-      <section class="menu">
+      <section className="menu">
           <a href="#">acerca de</a>
           <a href="#">Cerrar sesion</a>
   </section>
-      </section>
+  </section>    
 </nav>
 
-<section class="capa"></section>
+<section className="capa"></section>
 
 
 <input type="checkbox" id="btn-menu"/>
-<section class="container-menu">
-<section class="cont-menu">
+<section className="container-menu">
+<section className="cont-menu">
   <nav>
-      <ul class="nav">
+      <ul className="nav">
          <li><a><Image src="/icon/cliente.png" alt="Cliente" width={500} height={500}/> Clientes</a>
           <ul>
-              <li><Link href="/pages/crear-cliente">Registrar cliente</Link></li>
+              <li><Link href="../crear-cliente">Registrar cliente</Link></li>
               <li><a href="">Clientes</a></li>
           </ul>
          </li>
          <li><a><Image src="/icon/factura.png" alt="Factura" width={500} height={500}/> Factura</a>
           <ul>
-              <li><Link href="/pages/crear-factura">Nueva Factura</Link></li>
+              <li><Link href="../crear-factura">Nueva Factura</Link></li>
           </ul>
         </li>
          <li><a><Image src="/icon/producto menu.png" alt="Producto" width={500} height={500}/> Productos</a>
          <ul>
-             <li><Link href="/pages/crear-producto">Registrar Producto</Link></li>
+             <li><Link href="../crear-producto">Registrar Producto</Link></li>
          </ul>
          </li>
          <li><a><Image src="/icon/ajustes.png" alt="Ajustes" width={500} height={500}/> Ajustes</a></li>
       </ul>
   </nav>
-  <label for="btn-menu">✖️</label>
+     <label htmlFor='btn-menu'>✖️</label>
 </section>
 </section>
 </header>

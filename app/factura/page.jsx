@@ -1,18 +1,26 @@
+"use client"
 import "../css/factura.css"
-import "../css/style.css"
+import "../css/formulario.css"
+import React from 'react'
 
-export default function Factura(){
-    return(
-        <section class="factura" >
-        <h1>Factura</h1>
+
+export default function imprimir(){
+  
+  const handlePrint = () => {
+    window.print();
+  };
+
+  return (
+    <section className="tabla">
+       <h1 className="titulo">Factura</h1>
         
-        <section class="datos-cliente">
+        <section className="datos-cliente">
           <p>Nombre del cliente: Juan Pérez</p>
           <p>Dirección: Calle Principal, 123</p>
           <p>Ciudad: Ciudad de Ejemplo</p>
         </section>
         
-        <table class="tabla-productos">
+        <table className="tabla-productos">
           <thead>
             <tr>
               <th>Producto</th>
@@ -37,17 +45,14 @@ export default function Factura(){
           </tbody>
           <tfoot>
             <tr>
-              <td colspan="3" class="total">Total:</td>
+              <td colSpan={3} className="total">Total:</td>
               <td>$35.00</td>
             </tr>
           </tfoot>
         </table>
         
         <p>Gracias por su compra.</p> 
-        <section class="position">
-        <input type="button" value="Imprimir" />
-        </section>
-      </section>
-
-    );
+      <button onClick={handlePrint} className="boton">Imprimir</button>
+    </section>
+  );
 }

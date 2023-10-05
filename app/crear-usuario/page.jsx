@@ -1,12 +1,17 @@
-
+"use client"
 import Image from 'next/image';
 import Link from 'next/link';
-import '../css/style.css'
+import '../css/formulario.css'
 
 export default function InitUser(){
+    function regis(){
+        alert("Usuario fue registrado con exito")
+    }
     return (
         <form class="formulario">
-        <h1>Registrar Usuario</h1>
+            <section className='input-container'>
+        <h1 className='titulo'>Registrar Usuario</h1>
+        </section>
         <section class="container">
             <section class="input-container">               
                 <Image src="/icon/usuario.png"  alt="Usuario" width={500} height={500}/>
@@ -25,8 +30,8 @@ export default function InitUser(){
                 <input type="text" name="ID unico" placeholder="frase de recuperación"/>
             </section>
 
-            <Link href="../pages/NavBar">
-            <input type="button" value="Registrar Usuario"/>
+            <Link href="../app/page.jsx">
+            <button className='boton'onClick={regis}>Registrar</button>
             </Link>
         </section>
     </form>
