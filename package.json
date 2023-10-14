@@ -1,5 +1,5 @@
 {
-  "name": "alp-fapp",
+  "name": "m-r",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,11 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "yarn": "^1.22.19"
+    "react": "^18",
+    "react-dom": "^18",
+    "next": "13.5.4"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.16",
-    "postcss": "^8.4.31",
-    "tailwindcss": "^3.3.3"
+    "autoprefixer": "^10",
+    "postcss": "^8",
+    "tailwindcss": "^3",
+    "eslint": "^8",
+    "eslint-config-next": "13.5.4"
   }
 }
