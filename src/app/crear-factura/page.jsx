@@ -34,14 +34,16 @@ export default function CresteFactur(){
                 <input type="text" name="Productos" placeholder="Cantidad de Productos"/>
             </section>
             <section className="input-container">
-                <p><Image src="/icon/metodo-de-pago.png" alt="Metodo" width={500} height={500}/> Método de Pago:</p><p>               
-                    Tarjeta<input type="radio" name="option" value="tarjeta" checked/>
-                    Efectivo<input type="radio" name="option" value="efectivo"checked/>
-                    Pagó movil<input type="radio" name="option" value="pago movil"checked/>
-                </p>
+                <span className="MP1"><Image src="/icon/metodo-de-pago.png" alt="Metodo" width={500} height={500}/> Método de Pago: </span> <br/>           
+                    <span className="MP2">Tarjeta<input type="radio" name="option" value="tarjeta" checked/></span>
+                    <span className="MP3">Efectivo<input type="radio" name="option" value="efectivo"checked/></span>
+                    <span className="MP4">Pagó movil<input type="radio" name="option" value="pago movil"checked/></span>
+              
             </section>
             <section className="input-container">               
-                <p>Fecha:<input type="date" name="Fecha"/></p>
+                <span className="MP2">Fecha:<input className="inputDate" 
+                type="date"
+                 name="Fecha"/></span>
             </section>
             
             <p></p>
