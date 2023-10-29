@@ -8,8 +8,10 @@ export default function Home() {
   const [nombre,setNombre] = useState("");
   const [IDunico,setIDunico] = useState("");
   const [error,setError]=useState(false);
-  
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  };
   return (
     <section className="input-container">
      
@@ -40,7 +42,7 @@ export default function Home() {
       </section>
 
       <Link href="./NavBar" >
-      <button className="boton">Iniciar Sesion</button>
+      <button type="submit" className="boton">Iniciar Sesion</button>
       </Link>
       </form>
     </section>

@@ -14,6 +14,15 @@ CREATE TABLE IF NOT EXISTS public.cliente
     CONSTRAINT cliente_pkey PRIMARY KEY (idcliente)
 );
 
+CREATE TABLE IF NOT EXISTS public.compra
+(
+    idcompra integer NOT NULL DEFAULT nextval('compra_idcompra_seq'::regclass),
+    idcliente integer,
+    idproducto integer,
+    cantidad_producto character varying(10) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT compra_pkey PRIMARY KEY (idcompra)
+);
+
 CREATE TABLE IF NOT EXISTS public.factura
 (
     idfactura integer NOT NULL DEFAULT nextval('factura_idfactura_seq'::regclass),
@@ -22,6 +31,7 @@ CREATE TABLE IF NOT EXISTS public.factura
     metodo_pago metodo_pago NOT NULL,
     cantidad_productos character varying(5) COLLATE pg_catalog."default" NOT NULL,
     fecha character varying(10) COLLATE pg_catalog."default" NOT NULL,
+    idusuario integer,
     CONSTRAINT factura_pkey PRIMARY KEY (idfactura)
 );
 
@@ -35,12 +45,26 @@ CREATE TABLE IF NOT EXISTS public.producto
 
 CREATE TABLE IF NOT EXISTS public.usuario
 (
-    idusuario integer NOT NULL DEFAULT nextval('usuario_idusuario_seq'::regclass),
     nombre character varying(20) COLLATE pg_catalog."default" NOT NULL,
     cedula character varying(20) COLLATE pg_catalog."default" NOT NULL,
     frase character varying(30) COLLATE pg_catalog."default" NOT NULL,
+    idusuario integer NOT NULL,
     CONSTRAINT usuario_pkey PRIMARY KEY (idusuario)
 );
+
+ALTER TABLE IF EXISTS public.compra
+    ADD CONSTRAINT compra_idcliente_fkey FOREIGN KEY (idcliente)
+    REFERENCES public.cliente (idcliente) MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION;
+
+
+ALTER TABLE IF EXISTS public.compra
+    ADD CONSTRAINT compra_idproducto_fkey FOREIGN KEY (idproducto)
+    REFERENCES public.producto (idproducto) MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION;
+
 
 ALTER TABLE IF EXISTS public.factura
     ADD CONSTRAINT factura_idcliente_fkey FOREIGN KEY (idcliente)
@@ -52,6 +76,13 @@ ALTER TABLE IF EXISTS public.factura
 ALTER TABLE IF EXISTS public.factura
     ADD CONSTRAINT factura_idproducto_fkey FOREIGN KEY (idproducto)
     REFERENCES public.producto (idproducto) MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION;
+
+
+ALTER TABLE IF EXISTS public.factura
+    ADD CONSTRAINT idusuario FOREIGN KEY (idusuario)
+    REFERENCES public.usuario (idusuario) MATCH SIMPLE
     ON UPDATE NO ACTION
     ON DELETE NO ACTION;
 
